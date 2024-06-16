@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Todo List Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个使用 React 和 Material-UI库 构建的 Todo List 项目。项目通过父子组件之间的 `props` 传递数据和回调函数的方式实现组件间的数据共享。
 
-## Available Scripts
+## 安装和启动
 
-In the project directory, you can run:
+### 环境需求
 
-### `npm start`
+- Node.js
+- npm 包管理工具
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 安装步骤
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. 克隆项目仓库到本地：
 
-### `npm test`
+`   git clone https://github.com/yourusername/todolist-project.git
+`
+   
+2. 安装依赖：
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`
+### 启动项目：
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+启动命令会在本地服务器上运行应用程序。在浏览器中访问 http://localhost:3000 查看运行效果
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 数据共享方案选型原因
+本项目采用父子组件之间通过 props 传递数据和回调函数的方式进行数据共享。主要原因如下：
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 简单易用：使用 props 进行数据传递和回调函数进行事件处理是 React 中最基础和常见的模式，易于理解和使用。
+2. 明确的数据流向：父组件通过 props 向子组件传递数据，子组件通过回调函数向父组件传递事件，数据流向明确，有助于维护和调试。
+3. 适用于小型项目：对于相对简单和小型的项目，这种方式足够满足需求，无需引入复杂的状态管理库。
