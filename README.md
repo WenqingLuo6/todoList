@@ -1,6 +1,6 @@
 # Todo List Project
 
-这是一个使用 React 和 Material-UI库 构建的 Todo List 项目。项目通过父子组件之间的 `props` 传递数据和回调函数的方式实现组件间的数据共享。
+这是一个使用 React 和 Material-UI库 构建的 Todo List 项目。项目通过父子组件之间的 `props` 传递数据和回调函数的方式实现组件间的数据共享, 使用localStorage实现数据本地持久化。
 
 ## 安装和启动
 
